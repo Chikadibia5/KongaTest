@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>KongaTest.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6897bb;}
+.s3 { color: #808080;}
+.s4 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+KongaTest.java</font>
+</center></td></tr></table>
+<pre><span class="s0">public class </span><span class="s1">KongaTest {</span>
+<span class="s1">}</span>
+
+    <span class="s1">@Test (priority = </span><span class="s2">0 </span><span class="s1">)</span>
+    <span class="s0">public void </span><span class="s1">positivesignup() </span><span class="s0">throws </span><span class="s1">interruptedException {</span>
+        <span class="s3">//verify that the user is successfully signed up when value details are inputed</span>
+        <span class="s3">//input your username on the username field</span>
+        <span class="s1">driver.findElement(By.id(</span><span class="s4">&quot;oyohemmanuel@rocketmail.com&quot;</span><span class="s1">))sendkeys(...key to </span><span class="s4">&quot;oyohemmanuel@rocketmail.com&quot;</span><span class="s1">)</span>
+        <span class="s3">//locate the password field find and input the password</span>
+        <span class="s1">driver.findElement(By.id(</span><span class="s4">&quot;Treasure@4003&quot;</span><span class="s1">).sendkey(...keys to send</span><span class="s4">&quot;Treasure@4003&quot;</span><span class="s1">)</span>
+        <span class="s3">//click on signup button</span>
+        <span class="s1">driver.findElement(By.id(</span><span class="s4">&quot;submit&quot;</span><span class="s1">)).click()</span><span class="s0">;</span>
+        <span class="s1">Thread.sleep(mills:</span><span class="s2">5000</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+
+    <span class="s1">@Test (Priority = </span><span class="s2">1</span><span class="s1">)</span>
+    <span class="s0">public void </span><span class="s1">click Computer and Accessories() </span><span class="s0">throws </span><span class="s1">interruptedException{</span>
+        <span class="s3">// verify that when the user click Computer and Accessories it directed the user to browse category</span>
+        <span class="s1">driver.findElement(By.Xpath(</span><span class="s4">&quot;/html/body/div[1]/div/section/div[2]/nav/div[2]/div[2]/div/a[2]&quot;</span><span class="s1">).click()</span><span class="s0">;</span>
+        <span class="s3">//Verify that the when user cliceked on browse categories button the user is directed to the subcategories(laptop);</span>
+        <span class="s1">driver.findElement(</span><span class="s4">&quot;/html/body/div[1]/div/section/div[3]/section/main/section[3]/section/div/section/div[2]/div[2]/ul/li[3]/a/label/span&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s3">//click on the Apple Macbook to add item to the chart</span>
+        <span class="s1">driver.findElement(By.Xpath(</span><span class="s4">&quot;/html/body/div[1]/div/section/div[3]/section/main/section[3]/section/section/section[2]/section/ul/li[1]/div/div/div[2]/form/div[3]/button&quot;</span><span class="s1">))</span>
+        <span class="s1">Thread.sleep(mills:</span><span class="s2">5000</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+
+    <span class="s1">@Test (Priority = </span><span class="s2">2</span><span class="s1">)</span>
+    <span class="s0">public void </span><span class="s1">click on </span><span class="s4">'my_chart' </span><span class="s1">to confirm item and to fill in address{</span>
+        <span class="s3">//Verify that  when clicked on cart it directed the user to cofirm goods;</span>
+        <span class="s1">driver.findElement(By.Xpath(</span><span class="s4">&quot;/html/body/div[1]/div/section/div[3]/section/main/section[3]/section/section/section[2]/section/ul/li[1]/div/div/div[2]/form/div[3]/button&quot;</span><span class="s1">))</span>
+        <span class="s3">//verify when clicked on &quot;checkout&quot; it directed the user to fill in the address and confirm payment;</span>
+        <span class="s1">driver.findElement(By.Xpath(</span><span class="s4">&quot;/html/body/div[1]/div/section/div[3]/section/main/div/div[2]/div[4]/div/div[6]/div/a&quot;</span><span class="s1">))</span><span class="s0">;</span>
+        <span class="s3">//Click on the 'delivery option' KongaNow - (1 - 6 hours Estimated time);</span>
+        <span class="s1">driver.findElement(By.Xpath(</span><span class="s4">&quot;//*[@id=&quot;</span><span class="s1">checkbox</span><span class="s4">&quot;])</span>
+        <span class="s3">//click on Payment Options'Pay Now';</span>
+        <span class="s1">driver.findElement(By.Xpath(</span><span class="s4">&quot;/html/body/div[1]/div/section/div[2]/section/main/div/form/div/div[1]/section[2]/div/div[2]/div[1]/div[1]/span/input&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">Thread.sleep(mills:</span><span class="s2">5000</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+
+    <span class="s1">@Test  (priority = </span><span class="s2">3</span><span class="s1">)</span>
+    <span class="s0">public void </span><span class="s1">click on </span><span class="s0">continue </span><span class="s1">to make payment{</span>
+        <span class="s1">driver.findElement(By.Xpath(</span><span class="s4">&quot;/html/body&quot;</span><span class="s1">))</span>
+        <span class="s3">//input invalid card detail and click payment,</span>
+            <span class="s4">&quot;8094-3456-2344-3445&quot;</span>
+        <span class="s1">driver.findElement(By.Xpath(</span><span class="s4">&quot;//*[@id=&quot;</span><span class="s1">validateCardForm</span><span class="s4">&quot;]&quot;</span><span class="s1">)</span>
+        <span class="s1">Thread.sleep(mills:</span><span class="s2">5000</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+</pre>
+</body>
+</html>
